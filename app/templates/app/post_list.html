@@ -3,8 +3,20 @@
 	<title>Ola&#39;s blog</title>
 </head>
 <body>
-<p>Hi there!</p>
+<div>
+<h1><a href="/">Django Girls Blog</a></h1>
+</div>
 
-<p>It works!</p>
+<p>{% for post in posts %}</p>
+
+<div>
+<p>published: {{ post.published_date }}</p>
+
+<h1><a href="">{{ post.title }}</a></h1>
+
+<p>{{ post.text|linebreaksbr }}</p>
+</div>
+
+<p>{% endfor %}</p>
 </body>
 </html>
